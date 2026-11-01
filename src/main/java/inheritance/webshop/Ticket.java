@@ -13,6 +13,23 @@ package inheritance.webshop;
  * also skip this class and continue with the next part of the exercise if you
  * feel that you have understood the concept of inheritance.
  */
-public class Ticket {
+import java.time.LocalDateTime;
 
+public class Ticket extends Product {
+
+    private LocalDateTime eventDateTime;
+
+    public Ticket(String title, String description, double price, LocalDateTime eventDateTime) {
+        super(title, description, price);
+        this.eventDateTime = eventDateTime;
+    }
+
+    public LocalDateTime getEventDateTime() {
+        return eventDateTime;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Event date and time: " + eventDateTime;
+    }
 }
