@@ -26,38 +26,27 @@ public class Product {
     private String description;
     private double price;
 
-    public String getTitle() {
-        return title;
+    public Product(String title, String description, double price) {
+        // TODO: add instance variables and complete the constructor
+        this.title = title;
+        this.description = description;
+        this.price = price;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getTitle() {
+        return title;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Product(String title, String description, double price) {
-        this.title = title;
-        this.description = description;
-        this.price = price;
-    }
-
+    @Override
     public String toString() {
-        return "Product [title=" + title + ", description=" + description + ", price=" + price + "]";
+        return "Title: " + title + ", Description: " + description + ", Price: " + price;
     }
-
 }
