@@ -26,12 +26,12 @@ public class Main {
      * reusable.
      */
     public static void main(String... args) {
-
         /*
          * A new application object is created with the System.out object as an
          * argument. Run this code and see the output.
          */
-        Application app = new Application(System.out);
+        PrinterWithTimestamp printer = new PrinterWithTimestamp();
+        Application app = new Application(printer);
         app.run();
 
         /*
@@ -47,6 +47,5 @@ public class Main {
          * code, right? This is especially useful when you are using a class that you
          * cannot modify, such as a class from a third-party library.
          */
-
     }
 }
