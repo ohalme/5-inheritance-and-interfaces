@@ -1,7 +1,5 @@
 package inheritance.webshop;
 
-import interfaces.markdown.MarkdownExport;
-
 /**
  * This class represents products in a webshop application. The class will be
  * used as a base class for various product types in the next parts of the
@@ -22,44 +20,44 @@ import interfaces.markdown.MarkdownExport;
  * Note that this class itself does not utilize inheritance, but it will
  * extended by other classes in the exercise.
  */
-public class Product implements MarkdownExport {
+public class Product {
 
     private String title;
     private String description;
     private double price;
 
-    public Product(String title, String description, double price) {
-        // TODO: add instance variables and complete the constructor
-        this.title = title;
-        this.description = description;
-        this.price = price;
-    }
-
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public double getPrice() {
         return price;
     }
 
-    @Override
-    public String toString() {
-        return "Title: " + title + ", Description: " + description + ", Price: " + price;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    @Override
-    public String exportMarkdown() {
-        String result = "";
-        result = result + "# " + title + "\n";
-        result = result + "\n";
-        result = result + description + "\n";
-        result = result + "\n";
-        result = result + "Price: " + price;
-        return result;
+    public Product(String title, String description, double price) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
     }
+
+    public String toString() {
+        return "Product [title=" + title + ", description=" + description + ", price=" + price + "]";
+    }
+
 }
